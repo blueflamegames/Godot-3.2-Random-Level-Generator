@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scritps/rooms/room_generator.gd" type="Script" id=1]
+[ext_resource path="res://scritps/main.gd" type="Script" id=3]
+
+[node name="main" type="Spatial"]
+script = ExtResource( 3 )
+
+[node name="room_generator" type="Spatial" parent="."]
+script = ExtResource( 1 )
+iteration_range = Vector2( 15, 30 )
+
+[node name="player_spawn" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2, 0 )
+
+[node name="camera" type="Camera" parent="."]
+transform = Transform( 0.838671, 0.385118, -0.385118, 0, 0.707107, 0.707107, 0.544639, -0.59303, 0.59303, -8, 20, 10 )
+current = true
